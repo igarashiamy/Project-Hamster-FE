@@ -34,6 +34,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { LiveIntakeControl } from "@/components/LiveIntakeControl";
 import {
   getBasicExaminationData,
   completeAppointment,
@@ -653,6 +654,12 @@ const BasicExamination = () => {
               ))}
             </CardContent>
           </Card>
+
+          <LiveIntakeControl
+            disabled={isSubmitting}
+            form={form}
+            onChange={setForm}
+          />
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <Card className="border-border/80 bg-card shadow-sm">
